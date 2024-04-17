@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>End 2 End</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="js/index.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+
+</head>
+<body>
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-text">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="loading" class="d-print-none">
+        <div id="loading_background"></div>
+        <div id="loading_container" class="d-flex align-items-center flex-wrap">
+            <div id="loading_wrapper">
+                <div class="loader"></div>
+                <div class="w-100"></div>
+                <div class="display-3 text-primary font-weight-bold" id="wait-txt">P
+                    lease wait</div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="#" id="logo"><img src="images/logo.svg" width="100%"/></a>
+            <span id="sloggan">THE BINGO MULTIPLAYER EXPERT</span>
+            <div id="menuDropdown" class="dropdown">
+                <span class="dropdown-toggle" id="menu" data-toggle="dropdown">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#titles">About Us</a>
+                    <a class="dropdown-item" href="#subscribe">Subscribe</a>
+                    <a class="dropdown-item" href="#certification">Licenses</a>
+                    <a class="dropdown-item" href="#events">Events</a>
+                    <a class="dropdown-item" href="#news">News</a>
+                    <a class="dropdown-item" href="#live_bingo"><img src="images/livebingo_logo2.png" alt="live_bingo_section"></a>
+                    <a class="dropdown-item" href="#contactUs">Contact Us</a>
+                </div>
+            </div>
+            <!-- Collapse button -->
+            <button id="menuCollapse" class="navbar-toggler toggler-example collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation" style="outline:none;"><span class="dark-blue-text">
+                <i class="fas fa-bars"></i></span></button>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#titles">About us<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#subscribe">Subscribe</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certification">Licenses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#live_bingo"><img src="images/livebingo_logo2.png" alt="live_bingo_section"></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactUs">Contact us</a>
+                    </li>
+
+                </ul>
+                <!-- Links -->
+            </div>
+            <!-- Collapsible content -->
+        </div>
+    </nav>
+    <!--<nav class="navbar">-->
+        <!--<a class="navbar-brand" href="#"><img class="img-responsive" src="images/logo.svg" height="120"/></a>-->
+        <!--<span id="sloggan" class="d-none d-xl-block">THE BINGO MULTIPLAYER EXPERT</span>-->
+        <!--<div class="btn-group dropleft">-->
+          <!--<button class="btn btn-primary" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+            <!--Dropdown-->
+          <!--</button>-->
+          <!--<div class="dropdown-menu" aria-labelledby="dropdownMenu1">-->
+            <!--<a class="dropdown-item" href="#h1aboutUs">About Us</a>-->
+            <!--<a class="dropdown-item" href="#subscribe">Subscribe</a>-->
+            <!--<a class="dropdown-item" href="#contactUs">Contact Us</a>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<ul class="nav e2eMenu text-center">-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link"  href="#h1aboutUs">About Us</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="#subscribe">Subscribe</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link"  href="#contactUs">Contact Us</a>-->
+            <!--</li>-->
+        <!--</ul>&ndash;&gt;-->
+    <!--</nav>-->
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="main-banner">
+                <div class="play-button">
+                    <img class="active" src="images/playnormal.png" id="play-button-static" alt="play button">
+                    <img class="active" src="images/play-hover.gif" id="play-button-active" alt="play button-active">
+                </div>
+
+                <h1 id="seevideo">
+                    <strong>Watch the video</strong>
+                </h1>
+                <img class="banner" src="images/ball-container.jpg">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="video-hidden">
+      <div class="video-modal">
+        <div class="video-modal-content">
+            <div class="close-modal">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe src="https://player.vimeo.com/video/366094873?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen id="video_player"></iframe>
+        </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+
+         </div>
+      </div>
+    </div>
+
+
+
+
+    <h1 class="text-center" id="titles"><strong>About us</strong></h1>
+    <div class="container-fluid" id="aboutUs">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 text-center img-position">
+                <img class="img-fluid rounded-circle" src="images/balls.png" alt="Balls image" width="70%" />
+                <h3 class="text-center"><strong>The Bingo Multiplayer Expert</strong></h3>
+                <p class="text-center"><strong>END 2 END</strong> is a technology company, providing solutions for the Gaming and Gambling industry. Based in
+                    Buenos Aires(Argentina) and Miami(USA)
+                with a global reach, our management team has more than 15 years of experience in the sector.<br/>Our team is leader in Bingo Multiplayer
+                    technology solutions and
+                operations.<br/><br/>In the last 12 years, we create cutting edge Bingo software, platforms and other games for online casinos.</p>
+            </div>
+            <div class="col-lg-4 text-center img-position">
+                <img class="img-fluid rounded-circle" src="images/devices.png" alt="Balls image" width="70%" />
+                <h3 class="text-center"><strong>How It Works</strong></h3>
+                <dl class="text-center">
+                    <li>75-ball &amp; 90-ball Bingo Games</li>
+                    <li>100% HTML5, ready for web, tablets and smartphones</li>
+                    <li>Highly customizable design</li>
+                    <li>User-friendly interfaces &amp; chat rooms</li>
+                    <li>Simple to integrate with land-based bingo halls</li>
+                    <li>Simple to integrate with physical point-of-sales</li>
+                </dl>
+            </div>
+            <div class="col-lg-4 text-center img-position">
+                <img class="img-fluid rounded-circle" src="images/eye.png" alt="Balls image" width="70%" />
+                <h3 class="text-center"><strong>Looking to the Future</strong></h3>
+                <p class="text-center">In an increasingly global world, where every day more and more jurisdictions join the industry regulating their gaming activities, we want to position ourselves
+                as one of the main providers of Bingo technology.<br/><br/>
+                We want to be in all the Emerging and New Regulated markets.<br/><br/>
+                Since 2005, creating the Best in Class Bingo Multiplayer technology.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="subscribe">
+        <div class="container">
+            <h1 class="text-center"><strong>Subscribe</strong></h1>
+            <p class="text-center">Sign up to hear from us about specials, sales, and events.</p>
+            <form name="subscribe">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-2 text-center">
+                        <button class="btn btn-primary" id="btnSignUp">Sign up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <h1 class="text-center" id="titles"><strong>Licenses & Certifications</strong></h1>
+
+    <div class="container-fluid" id="certification">
+
+  <div class="row justify-content-center">
+        <div class="col-lg-4 text-center img-position">
+            <img class="img-fluid rounded" src="images/cer.jpg" alt="certificate_1" width="60%"/>
+            <h3 class="text-center"><strong>GLI-19</strong></h3>
+        </div>
+        <div class="col-lg-4 text-center img-position">
+            <img class="img-fluid rounded" src="images/cer3.jpg" alt="certificate_1" width="60%"/>
+            <h3 class="text-center"><strong>United Kingdom (UKGC)</strong></h3>
+
+        </div>
+        <div class="col-lg-4 text-center img-position">
+            <img class="img-fluid rounded" src="images/cer2.jpg" alt="certificate_1" width="60%"/>
+            <h3 class="text-center"><strong>Colombia (COLJUEGOS)</strong></h3>
+
+        </div>
+
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row justify-content-center">
+    <div class="col-lg-4 text-center img-position">
+        <img class="img-fluid rounded" src="images/cer4.jpg" alt="certificate_1" width="60%"/>
+        <h3 class="text-center"><strong>Netherlands (Kansspelautoriteit)</strong></h3>
+    </div>
+    <div class="col-lg-4 text-center img-position">
+        <img class="img-fluid rounded" src="images/cer5.jpg" alt="certificate_1" width="60%"/>
+        <h3 class="text-center"><strong>Malta Gaming Authority (MGA)</strong></h3>
+
+    </div>
+    <div class="col-lg-4 text-center img-position">
+        <img class="img-fluid rounded" src="images/cer6.jpg" alt="certificate_1" width="60%"/>
+        <h3 class="text-center"><strong>Portugal (SRJI)</strong></h3>
+
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row justify-content-center">
+<div class="col-lg-4 text-center img-position">
+    <img class="img-fluid rounded" src="images/cer7.jpg" alt="certificate_1" width="60%"/>
+    <h3 class="text-center"><strong>Denmark (SPILLEMYNDIGHEDEN)</strong></h3>
+</div>
+<div class="col-lg-4 text-center img-position">
+    <img class="img-fluid rounded" src="images/cer8.jpg" alt="certificate_1" width="60%"/>
+    <h3 class="text-center"><strong>Buenos Aires (LOTBA)</strong></h3>
+</div>
+<div class="col-lg-4 text-center img-position">
+    <img class="img-fluid rounded" src="images/cer9.png" alt="certificate_1" width="60%"/>
+    <h3 class="text-center"><strong>Czech Republic (Ministry of Finance)</strong></h3>
+</div>
+
+</div>
+
+<hr class="featurette-divider">
+
+
+
+
+
+
+</div>
+
+    <div id="events">
+        <h1 class="text-center" id="titles"><strong>Events</strong></h1>
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class=" col-xs-10 col-lg-2 text-center" id="ice_2020">
+                <img class="img-fluid" id="ice_logo" src="images/ice2019.jpg" />
+                <h2 class="feature-heading"><strong>ICE 2024</strong></h2>
+                <p class="m-0">February 6-7-8, 2023</p>
+                <p class="m-0">London, UK</p>
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images2/ice24-01.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images2/ice24-02.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images2/ice24-03.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images2/ice24-04.jpg" />
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class=" col-xs-10 col-lg-2 text-center" id="ice_2020">
+                <img class="img-fluid" id="ice_logo" src="images/ice2019.jpg" />
+                <h2 class="feature-heading"><strong>ICE 2023</strong></h2>
+                <p class="m-0">February  7-8-9, 2023</p>
+                <p class="m-0">London, UK</p>
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice23_01.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice23_02.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice23_03.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice23_04.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice23_05.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class=" col-xs-12 col-lg-3 text-center" id="ice_2020">
+                <img class="img-fluid" id="ice_logo" src="images/ice2019.jpg" />
+                <h2 class="feature-heading"><strong>ICE 2022</strong></h2>
+                <p class="m-0">April 12-13-14, 2022</p>
+                <p class="m-0">London, UK</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-01.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-02.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-03.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-04.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class=" col-xs-12 col-lg-4 text-center" id="ice_2020">
+                <img class="img-fluid" src="images/SAGSE2022.jpg" />
+                <h2 class="feature-heading"><strong>SAGSE LATAM 2022</strong></h2>
+                <p class="m-0">March 30th & 31th 2022</p>
+                <p class="m-0">Buenos Aires, ARG</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/sagse_a.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/sagse_b.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/sagse_c.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class="event_info col-xs-12 col-lg-4 text-center">
+
+                <h2 class="feature-heading"><strong>G&M News / Big Bola Casinos</strong></h2>
+                <p class="m-0">March 10th & 11th, 2022</p>
+                <p class="m-0">Estado de Mexico, Mexico</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/mex_03.jpg.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/mex_02.jpg.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/mex_01.jpg" />
+            </div>
+
+        </div>
+
+
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class=" col-xs-12 col-lg-3 text-center" id="ice_2020">
+                <img class="img-fluid" id="ice_logo" src="images/ice2019.jpg" />
+                <h2 class="feature-heading"><strong>ICE 2020</strong></h2>
+                <p class="m-0">February 4th-5th-6th 2020</p>
+                <p class="m-0">London, UK</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/london-01.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/london-02.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/london-03.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/london-04.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class="event_info col-xs-12 col-lg-4 text-center">
+                <h2 class="feature-heading"><strong>FADJA 2019</strong></h2>
+                <p class="m-0">April 10th-11th 2019</p>
+                <p class="m-0">Bogota, Colombia</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/fadja2019-1.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/fadja2019-2.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/fadja2019-3.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class="event_info col-xs-12 col-lg-4 text-center">
+                <h2 class="feature-heading"><strong>Online Gaming Summit Brazil</strong></h2>
+                <p class="m-0">December 3rd-4th 2018</p>
+                <p class="m-0">Sao Paulo, Brazil</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ogs-brazil-01.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ogs-brazil-02.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ogs-brazil-03.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class="event_info col-xs-12 col-lg-4 text-center">
+                <h2 class="feature-heading"><strong>GET In Mexico</strong></h2>
+                <p class="m-0">November 15th 2018</p>
+                <p class="m-0">DF, Mexico</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/get-in-mexico-01.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/get-in-mexico-03.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/get-in-mexico-02.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class="event_info col-xs-12 col-lg-4 text-center">
+                <h2 class="feature-heading"><strong>GOL Colombia</strong></h2>
+                <p class="m-0">November 6th-7th 2018</p>
+                <p class="m-0">Cartagena, Colombia</p>
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/gol-03.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/gol-01.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/gol-02.png" />
+            </div>
+            <div class="col-xs-12 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div><hr class="featurette-divider">
+        <div class="row">
+            <div class="event_info col-xs-12 col-lg-4 text-center">
+                <h2 class="feature-heading"><strong>ICE AFRICA</strong></h2>
+                <p class="m-0">October 24th-25th 2018</p>
+                <p class="m-0">Sandton, South Africa</p>
+            </div>
+            <div class="col-xs-3 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-01.png" />
+            </div>
+            <div class="col-xs-3 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-02.png" />
+            </div>
+            <div class="col-xs-3 col-md-3 col-lg-2 p-1" style="text-align:center;">
+                <img class="img-fluid" src="images/ice-03.png" />
+            </div>
+            <div class="col-xs-3 col-md-3 col-lg-2 p-1" style="text-align:center;">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+
+
+        <h1 class="text-center" style="color: black" id="news" ><strong>In the News</strong></h1>
+
+        //<hr class="featurette-divider">
+        <div class="row align-items-center">
+            <div class="col-md-2">
+
+                <h6 class="dates"> Apr 03, 2024</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center">
+                    <a href="https://www.gamesbras.com/feiras/bis-sigma-2024/2024/4/17/a-plataforma-de-ilottery-da-end-end-se-ajusta-s-necessidades-dos-operadores-brasileiros-44269.html"> "A plataforma de iLOTTERY da END 2 END se ajusta às necessidades dos operadores brasileiros" </a>
+                </h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-28.jpg">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row align-items-center">
+            <div class="col-md-2">
+
+                <h6 class="dates"> Apr 03, 2024</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center">
+                    <a href="https://www.gamesbras.com/apostas-online/igaming/2024/4/2/end-end-esta-pronta-para-ser-um-dos-principais-fornecedores-de-bingo-loteria-no-brasil-43778.html"> "END 2 END está pronta para ser um dos principais fornecedores de bingo e loteria no Brasil." </a>
+                </h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images2/gmb-banner.png">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Feb 28, 2024</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center">
+                    <a href="https://www.yogonet.com/international/news/2024/02/14/70810-ice-london-2024-marked-end-2-end-39s-most-successful-event-in-company-history">ICE London 2024 marked END 2 END's most successful event in company history </a>
+                </h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-05.png">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Aug 31, 2023</h6>
+
+            </div>
+
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a href="https://www.yogonet.com/international/noticias/2023/08/29/68524-end-2-end-receives-certification-for-its-rng-and-bingo-platform-in-the-czech-republic"
+                                           target="_blank">END 2 END receives certification for its RNG and Bingo Platform in the Czech Republic </a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-27.jpg">
+
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Jul 03, 2023</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/news/2023/07/03/67741-mexico-39s-first-show-with-interactive-games-premiazo-to-launch-next-month"
+                        target="_blank">Mexico's first TV show with interactive games Premiazo to launch next month</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-26.jpg">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Jun 06, 2023</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/news/2023/06/06/67407-end2end-launches-its-lottery-platform-in-zulia-through-partnership-with-state-lottery"
+                        target="_blank">END 2 END launches its LOTTERY platform in Zulia through partnership with state lottery </a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-25.jpg">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> May 23, 2023</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/international/news/2023/05/22/67239-end-2-end-partners-with-sprint-gaming-to-launch-its-new-online-bingo-product-wingo#&gid=1&pid=1"
+                       target="_blank">END 2 END partners with Sprint Gaming to launch its new online bingo product WINGO</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-24.jpg">
+
+           </div>
+           </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Feb 27, 2023</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/international/news/2023/02/27/66236--34end-2-end-39s-participation-in-ice-london-far-exceeded-our-expectations-34"
+                       target="_blank">END 2 END's participation in ICE London far exceeded our expectations</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-05.png">
+
+           </div>
+           </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Dec 06, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://gamblingnews.uk/news/2022-12-06/end-2-end-awarded-mga-licence"
+                       target="_blank">END 2 END Awarded MGA Licence!</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-23.jpg">
+
+           </div>
+           </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Sep 02, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+                <!--
+               <h4 class="text-center"><a
+                       href="https://casinobeats.com/2022/08/24/vivo-gaming-end-2-end-bingo/"
+                       target="_blank" >Vivo Gaming to gain END 2 END bingo content</a></h4>
+                    -->
+
+                <img id="pipo" class="w-100" src="images/sbc_i.jpeg">
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/sbc_d.jpeg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Aug 24, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://casinobeats.com/2022/08/24/vivo-gaming-end-2-end-bingo/"
+                       target="_blank">Vivo Gaming to gain END 2 END bingo content</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-22.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Aug 15, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://globalgamblingnews.com/delasport-end-2-end-enter-strategic-uk-partnership/"
+                       target="_blank">Delasport & END 2 END enter strategic partnership</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-21.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Aug 08, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/latinoamerica/noticias/2022/08/08/91388-end-2-end-recibio-la-autorizacion-de-lotba-para-ofrecer-bingo-online-en-la-ciudad-de-buenos-aires"
+                       target="_blank">END 2 END recibió la autorización de LOTBA para ofrecer Bingo en la Ciudad Buenos Aires</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-19.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Aug 02, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.intergameonline.com/igaming/news/three-european-licences-for-end-2-end"
+                       target="_blank">Three European licences for END 2 END</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-20.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Jul 05, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.gamesbras.com/english-version/2022/7/5/betconnections-and-end-end-announce-strategic-alliance-for-bingos-and-lotteries-31509.html"
+                       target="_blank">Betconnections and END 2 END announce strategic alliance for Bingos and Lotteries</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-16.png">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+       <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Mar 29, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/latinoamerica/noticias/2022/03/29/89776-argentina-end-2-end-obtuvo-el-registro-como-proveedor-de-lotba"
+                       target="_blank">END 2 END obtuvo el registro como proveedor de LOTBA</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-19.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Mar 18, 2022</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/international/news/2022/03/18/61854--34being-aspire-global-39s-bingo-arm-allows-us-to-envision-a-bright-future-34"
+                       target="_blank">Interview to END 2 END's CEO, Alejandro Revich</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-02.png">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Dec 10, 2021</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center" id="u"><a
+                       href="https://www.gamingintelligence.com/finance/manda/148880-aspire-global-acquires-25-stake-in-bingo-supplier-end-2-end/"
+                       target="_blank">Aspire Global acquires 25% stake in bingo supplier END 2 END</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-18.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Nov 25, 2021</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://europeangaming.eu/portal/latest-news/2021/11/25/104707/pariplay-bolsters-offering-with-end-2-end-fusion-deal/"
+                       target="_blank">Pariplay bolsters offering with END 2 END Fusion™ deal</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-17.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Nov 01, 2021</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://igamingfuture.com/end-2-end-granted-ukgc-licence/"
+                       target="_blank">END 2 END Granted UKGC Licence</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-16.jpg">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Oct 13, 2021</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/international/noticias/2021/10/13/59712-new-online-casino-and-bingo-veowin-launches-in-latin-america"
+                       target="_blank">New online casino and bingo VeoWin launches in Latin America</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-15b.png">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+               <h6 class="dates"> Sep 20, 2021</h6>
+
+           </div>
+           <div class="col-sm-6">
+
+               <h4 class="text-center"><a
+                       href="https://www.yogonet.com/international/noticias/2021/09/20/59359-end-2-end-expands-in-latin-america-via-deal-with-veowin"
+                       target="_blank">END 2 END expands in Latin America via deal with VeoWin</a></h4>
+
+           </div>
+
+           <div class="col-sm-3 p-0 m-0">
+
+               <img class="news_cover" src="images/news-15.png">
+
+           </div>
+
+           <hr class="featurette-divider">
+
+
+       </div>
+
+       <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+             <div class="col-md-2">
+
+                <h6 class="dates"> Sep 14, 2021</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a
+                        href="https://www.gamesbras.com/english-version/2021/9/14/salsa-technology-integrates-end-ends-multiplayer-bingo-solution-to-its-igaming-platform-25395.html"
+                        target="_blank">Salsa Technology integrates END 2 END's multiplayer bingo solution to its iGaming platform</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-14.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+
+
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Apr 06, 2021</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2021/04/06/57112-bingolar-launches-in-brazil-with-end-2-end"
+                        target="_blank">Bingolar launches in Brazil with END 2 END</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-13.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Apr 01, 2021</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2021/04/01/57076-end-2-end-launches-bingo-multiplayer-in-aruba"
+                        target="_blank">END 2 END launches bingo multiplayer in Aruba</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-02.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Mar 29, 2021</h6>
+
+            </div>
+            <div class="col-sm-6">
+
+                <h4 class="text-center"><a
+                        href="https://gamingamericas.com/press-releases/2021/03/29/76249/end-2-end-enters-colombia-with-betplay-partnership/"
+                        target="_blank">END 2 END enters Colombia with BetPlay partnership</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-12.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+         <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Mar 3, 2021</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2021/03/02/56697-end2end-recognized-with-best-online-bingo-provider-2020-award"
+                        target="_blank">END 2 END recognized with Best Online Bingo Provider 2020 award</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-11.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+         <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Dec 7, 2020</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://recentslotreleases.com/press-releases/2020/12/07/78089/marriott-stellaris-casino-launches-omni-channel-bingo-offering-with-end-2-end-platform/"
+                        target="_blank">Marriott Stellaris Casino launches omni-channel Bingo offering with END 2 END platform</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-10.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Nov 17, 2020</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2020/11/17/55471-playbonds-migrates-bingo-online-content-into-end-2-ends-platform"
+                        target="_blank">PlayBonds migrates bingo online content into END 2 END's platforma</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-09.jpg">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Sep 15, 2020</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://casinogazette.com/igaming-news/high-rollers-casino-backs-end-2-ends-cms-for-re-opening-in-alabama/"
+                        target="_blank">High Rollers casino backs END 2 END´S Central Management System for re-opening in Alabama</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-08.jpg">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Aug 05, 2020</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2020/08/05/54179-end-2-end-launches-bingo-multicolors-inaugural-online-operation"
+                        target="_blank">END 2 END launches Bingo Multicolor’s inaugural online operation</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-07b.jpg">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Jun 11, 2020</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2020/06/10/53536-clubs-4-fun-adds-end-2-ends-bingo-offering"
+                        target="_blank">Clubs 4 Fun adds END 2 END's bingo offering</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-06.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Apr 29, 2020</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.sigma.com.mt/news/end-2-end-energises-its-global-expansion-strategy-following-bmm-testlabs-certification"
+                        target="_blank">END 2 END energises its global expansion strategy following BMM TESTLABS’ CERTIFICATION</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/pipo.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Feb 4, 2020</h6>
+
+            </div>
+
+            <div class="col-sm-6">
+                <!-- Feb 4 2020-->
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/latinoamerica/noticias/2020/02/04/81334-end-2-end-ofrece-en-ice-juegos-reales-de-bingo-multiplayer?utm_campaign=getresponse&utm_content=getresponse&utm_medium=getresponse&utm_source=getresponse&utm_term=getresponse"
+                        target="_blank">End 2 End ofrece en ICE juegos reales de Bingo Multiplayer</a></h4>
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-05.png">
+
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Jan 17, 2020</h6>
+
+            </div>
+
+            <div class="col-sm-6">
+                <!-- Ene 17 2020-->
+                <h4 class="text-center"><a
+                        href="https://g-mnews.com/news/bingo-multiplayer-una-plataforma-innovadora-by-end-2-end/?utm_source=newsletter&utm_medium=email&utm_campaign=newsletter_17_01_2020_gaming_and_media_news&utm_term=2020-02-17"
+                        target="_blank">Bingo Multiplayer, una plataforma innovadora by END 2 END</a></h4>
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-04.png">
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Dic 16, 2019</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- Dic 16 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.soloazar.com/en/v/Bingo/235923_Apuesta-Total-launches-its-Bingo-offering-with-END-2-END"
+                        target="_blank">Apuesta Total launches its Bingo offering with END 2 END</a></h4>
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-03.png">
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="row align-items-center">
+            <div class="col-md-2">
+
+                <h6 class="dates"> Nov 11, 2019</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- Nov 11 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.intergameonline.com/igaming/news/end-2-end-bingo-content-deal-for-patagonia"
+                        target="_blank">END 2 END bingo content deal for Patagonia</a></h4>
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news.png">
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-2">
+
+                <h6 class="dates"> Oct 12, 2019</h6>
+
+            </div>
+            <div class="col-sm-6">
+                <!-- oct 12 2019-->
+                <h4 class="text-center"><a
+                        href="https://www.yogonet.com/international/noticias/2019/12/10/51812-end-2-end-aims-to-be-the-best-bingo-multiplayer-option"
+                        target="_blank">End 2 End aims to be the best Bingo Multiplayer option</a></h4>
+
+            </div>
+
+            <div class="col-sm-3 p-0 m-0">
+
+                <img class="news_cover" src="images/news-02.png">
+
+            </div>
+
+            <hr class="featurette-divider">
+
+        </div>
+
+
+
+
+
+        <hr class="featurette-divider">
+
+    </div>
+
+    <div>
+
+
+        <h1 class="text-center" id="live_bingo" ><img src="images/livebingo_logo.png" alt="live_bingo_logo" id="live_bingo_logo"></h1>
+
+        <hr class="featurette-divider">
+
+        <!--
+            <div id="live_container">
+            <div class="col align-self-center">
+
+            <iframe id="video_star" src="https://www.youtube-nocookie.com/embed/HpgNCYOGIYg?controls=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+            </iframe>
+                </div>
+            </div>
+
+        <div id="live_container">
+        <div  class="col align-self-center" id="uwucontainer">
+            <iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/HpgNCYOGIYg?"></iframe>
+          </div>
+        </div>
+        -->
+        <div id="live_container">
+        <div id="video_star">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/704569019?h=201b9eb009&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:14%;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+        </div>
+        </div>
+        </div>
+
+
+
+    <div class="container-fluid" id="contactUs">
+
+            <h1 class="text-center"><strong>Contact us</strong></h1>
+            <form name="contactUs" method="post">
+                <div class="row justify-content-center" style="border-top: 1px solid #ebebeb;">
+                    <div class="col-lg-8" style="margin-top:2%;">
+                        <h2 style="font-weight:lighter;">Send us a message</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" aria-describedby="textHelp" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <textarea type="email" class="form-control" rows="10" name="message" aria-describedby="emailHelp"
+                                      placeholder="Message" required minlength="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 text-center">
+                        <button class="btn btn-primary" id="btnContactUsSend" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+
+
+    </div>
+
+
+
+    <section>
+        <div class="container" id="footer">
+            <div class="row justify-content-between">
+                <div class="col-lg-3">
+                    <p class="float-left">Copyright &copy; <strong>END 2 END</strong></p>
+                </div>
+                <div class="col-lg-3 text-right">
+                    <p class="float-right">All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

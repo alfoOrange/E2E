@@ -1,0 +1,45 @@
+html { background: url(images/logo_coming-soon.png) no-repeat center center fixed;
+	   background-size: cover;
+	   -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: contain;
+	}
+
+.title { position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 transform: translateX(-50%) translateY(-50%);
+		 -ms-transform: translateX(-50%) translateY(-50%);
+		 -webkit-transform: translateX(-50%) translateY(-50%);
+		 -moz-transform: translateX(-50%) translateY(-50%);
+		 -o-transform: translateX(-50%) translateY(-50%);
+		 font-family: Tahoma, Helvetica, Arial, sans-serif;
+		 text-align: center;
+		 color: rgb(255, 255, 255);
+	   }
+
+
+
+.title h1, .title h2 {font-weight: normal;}
+
+.title h1 {font-size: 42px;}
+
+.title h2 {font-size: 30px;}
+
+.content { position: absolute;
+		   top: 100%;
+		   left: 0;
+		   width: 100%;
+		   background: rgb(60, 60, 60);
+		   color: rgb(255, 255, 255);
+		   font-family: Tahoma, Helvetica, Arial, sans-serif;
+		 }
+
+.inner { width: 80%;
+		 margin: 0 auto;
+		 padding-top: 45px;
+		 padding-bottom: 45px;
+		 line-height: 130%;
+	   }
+	
